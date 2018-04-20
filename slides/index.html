@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Vue CLI 3</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <style>
+      .reveal { background-color: #00A2F3; }
+      .reveal section img {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+
+      .reveal code { color: #B9FFFA; }
+      .reveal .font-small,
+      .reveal blockquote { font-size: 0.6em; }
+      .reveal .font-smallest { font-size: 0.4em; }
+    </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section>
+          <h1><code>vue-cli</code></h1>
+          <h3>Painless scaffolding</h3>
+          <br><br>
+          <p>andreas johan virkus, 2018</p>
+        </section>
+
+				<section>
+          <h2>The past</h2>
+
+          <p>vue-cli 1</p>
+          <p>vue-cli 2</p>
+
+					<aside class="notes">
+            <p>Vue-cli 1 and 2 both allowed the user to scaffold an app conveniently, but after the
+            initial setup, they were left on their own. The versions didn't have any breaking changes
+            between them and version 2's major change was the addition of prompts instead of a schema
+            file and a better CLI experience in general.</p>
+          </aside>
+        </section>
+
+				<section>
+          <h2>The present</h2>
+
+          <p>Version 3 in beta; preparing a RC</p>
+
+          <p>The missing features currently:</p>
+          <ul>
+            <li>Build report</li>
+            <li>Custom error overlay</li>
+            <li>Helpers for extending config files</li>
+          </ul>
+
+          <aside class="notes">
+            <code>Vue-cli@3</code> is in beta atm and they're preparing a RC,
+            but the toolset and existing features are looking real stable.
+          </aside>
+        </section>
+
+				<section>
+          <h2>The future</h2>
+
+          <h3>Endless ✨</h3>
+
+          <aside class="notes">
+            <p>But seriously. The extensibility that the plugin ecosystem creates, is
+              simply awe-some.</p>
+            <p>To list but a few already existing community plugins:</p>
+            <ul>
+              <li>Vuetify, Buefiy, Cordova, NativeScript and other major frameworks (including IC)</li>
+              <li>Docker</li>
+              <li>Apollo</li>
+              <li>Critical CSS</li>
+              <li>Express</li>
+              <li>Netlify Lambda</li>
+              <li>i18n</li>
+              <li>Nuxt</li>
+              <li>Electron</li>
+              <li>Storybook</li>
+              <li>Meta tags</li>
+            </ul>
+
+            <p>Bigbank plugins:</p>
+            <p>Interface Components, Express (logging, security headers, microservice controllers, middleware), docker, ?</p>
+          </aside>
+        </section>
+
+				<section>
+          <section>
+            <h2>CLI</h2>
+
+            <img alt="End-result of package.json after running vue create" src="/code-examples/cli-scripts.png">
+
+            <aside class="notes">
+              All this is made possible through a magical vue-cli-service library,
+              that hides away the mess, yet let's you keep control of everything.
+            </aside>
+          </section>
+
+          <section>
+            <h2>CLI commands</h2>
+
+            <img alt="Available vue-cli commands" src="/code-examples/cli-commands.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2><code>serve</code></h2>
+
+            <img alt="Serving a vue file with vue-cli-service serve" src="/code-examples/cli-serve.png">
+
+            <aside class="notes">
+              <p>The serve command is a powerful part of the vue-cli-service, allowing you to
+                serve even a single .vue file without any config or overhead of the project setup!</p>
+
+              <p>The drawback of vue serve is that it relies on globally installed dependencies which may
+                be inconsistent on different machines. Therefore this is only recommended for rapid prototyping.</p>
+            </aside>
+          </section>
+
+          <section>
+            <h2><code>build</code></h2>
+
+            <img alt="Building a web component with vue-cli-service build" src="/code-examples/cli-build.png">
+
+            <aside class="notes">
+              <p>vue-cli-service build command exposes multiple build targets like app, lib, wc, wc-async</p>
+            </aside>
+          </section>
+        </section>
+
+				<section data-background-image="https://media0.giphy.com/media/pSFa0BLnR0Ov6/giphy.gif">
+					<h2>Demo time!</h2>
+        </section>
+
+        <section>
+          <section>
+            <h2>'Erryday workflow</h2>
+
+            <ul>
+              <li><a href="https://stash.big.local/projects/WEB/repos/vue-cli-plugins/">WEB/vue-cli-plugins</a></li>
+            </ul>
+
+            <aside class="notes">
+              <p>Start using them now!</p>
+              <p>As mentioned, there's endless possibilities, like...</p>
+              <p>FE: analytics, different setups per-project (loan origination, back-office, self-service, PMS)</p>
+              <p>BE: Prompt the user which/what express store to use (redis vs filestorage vs db?)</p>
+              <p>BE: Multer support</p>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <h2>Let's discuss!</h2>
+
+          <h2>Thanks!</h2>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        transition: 'convex',
+        backgroundTransition: 'zoom',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
