@@ -17,3 +17,7 @@ A workshop and presentation meant to enlighten people about vue-cli 3
 ----
 
 ✨
+
+## Vue unit testing references
+- [Jest example spec](https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli-plugin-unit-jest/generator/template/tests/unit/HelloWorld.spec.js)
+- [Vue-test-utils <3](https://vue-test-utils.vuejs.org)
